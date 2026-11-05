@@ -30,11 +30,11 @@ def run_tkinter_app():
     window.geometry("360x450")
     window.configure(bg=BG)
 
-    tk.Label(window, text="my vibe playlist🥰", bg=BG, fg=PURPLE, font=("Arial",15,"bold")).pack(paddy=10)
+    tk.Label(window, text="my vibe playlist🥰", bg=BG, fg=PURPLE, font=("Arial",15,"bold")).pack(pady=10)
     box = tk.Listbox(window, bg=CARD, fg=TEXT, font=("Arial",12), selectbackground=BLUE, width=28, height=8, bd=0)
-    box.pack(paddy=8)
+    box.pack(pady=8)
     status=tk.Label(window, text="select a song",bg=BG, fg=TEXT, font=("Arial",10))
-    status.pack(paddy=5)
+    status.pack(pady=5)
 
     def refresh():
         box.delete(0,tk.END)
@@ -70,7 +70,7 @@ def run_tkinter_app():
 
     refresh()
     row=tk.Frame(window,bg=BG)
-    row.pack(paddy=8)
+    row.pack(pady=8)
     tk.Button(row, text="play",command=play, bg=BLUE, width=6).grid(row=0, column=0, padx=3)
     tk.Button(row, text="pause",command=pause, bg=PINK, width=6).grid(row=0, column=1, padx=3)
     tk.Button(row, text="resume", command=resume, bg=BLUE, width=6).grid(row=0, column=2, padx=3)
@@ -102,6 +102,8 @@ def run_streamlit_app():
         st.success("saved:" + clean(new_file))
         st.rerun()
 
+# if __name__ == "__main__":
+#     run_tkinter_app()
 if st and st.runtime.exists():
     run_streamlit_app()
 else:
