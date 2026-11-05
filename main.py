@@ -79,9 +79,9 @@ def run_tkinter_app():
     window.mainloop()
                              
 def run_streamlit_app():       
-    st.set_page_config(page_title="Calm Vibes Music")
+    st.set_page_config(page_title="Calm Vibes Music🥰😍")
     st.markdown(f"<style>.stApp{{background-color:{BG};color:{TEXT};}} h1,h2,h3,p,label{{color:{PURPLE}!important;}}</style>", unsafe_allow_html=True)
-    st.title("Clam Vibes Music Player")
+    st.title("Clam Vibes Music Player🥰😍")
 
     playlist = get_playlist()
     if playlist:                                                                              
